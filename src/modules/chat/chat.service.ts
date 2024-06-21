@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Message } from '../../schemas/message.schema';
 import { CreateMessageDto } from './dto/create-message.dto';
-import { getId } from 'src/utils/helpers';
+import { getId } from '../../utils/helpers';
 import { writeFile, writeFileSync } from 'fs';
 import * as path from 'path';
 
