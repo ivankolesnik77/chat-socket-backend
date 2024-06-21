@@ -4,7 +4,7 @@ import { IoAdapter } from '@nestjs/platform-socket.io';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as express from 'express';
 import { join } from 'path';
-async function bootstrap() {
+export async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({ origin: process.env.CLIENT_DOMAIN });
