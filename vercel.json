@@ -3,7 +3,15 @@
   "env": {
     "CLIENT_DOMAIN": "https://chat-socket-blue.vercel.app/"
   },
-  "builds": [{ "src": "src/main.ts", "use": "@vercel/node" }],
+  "builds": [
+    {
+      "src": "src/main.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
@@ -12,3 +20,4 @@
     }
   ]
 }
+s
