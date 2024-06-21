@@ -1,7 +1,7 @@
 {
   "version": 2,
   "env": {
-    "BLOCKCHAIN_API": "https://mainnet.infura.io/v3/a70eaa3006094bb1834f7dfb92dc0efb"
+    "CLIENT_DOMAIN": "https://chat-socket-blue.vercel.app/"
   },
   "builds": [{ "src": "src/main.ts", "use": "@vercel/node" }],
   "routes": [
@@ -12,26 +12,3 @@
     }
   ]
 }
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
-  "env": {
-    "NEXT_PUBLIC_API_URL": "https://api.example.com"
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://api.example.com/:path*"
-    }
-  ],
